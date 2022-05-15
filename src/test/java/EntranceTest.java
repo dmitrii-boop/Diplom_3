@@ -32,7 +32,7 @@ public class EntranceTest {
     @Test
     @DisplayName("Вход по кнопке «Войти в аккаунт» на главной")
     @Description("Пользователь может войти в аккаунт с главной страницы")
-    public void userAuthorizationViaLoginToAccount() throws InterruptedException {
+    public void userAuthorizationViaLoginToAccount() {
 
         HomePage homePage = open(HomePage.URL, HomePage.class);
         homePage.clickSignInButton();
@@ -45,13 +45,12 @@ public class EntranceTest {
         PersonalAccountPage personalAccountPage = page(PersonalAccountPage.class);
         personalAccountPage.clickExitButton();
         authorizationPage.assertInscriptionEntranceVisible();
-        Thread.sleep(1000);
     }
 
     @Test
     @DisplayName("Вход через кнопку «Личный кабинет»")
     @Description("Пользователь может войти в аккаунт через «Личный кабинет»")
-    public void userAuthorizationThroughThePersonalAccount() throws InterruptedException {
+    public void userAuthorizationThroughThePersonalAccount() {
 
         HomePage homePage = open(HomePage.URL, HomePage.class);
         homePage.clickPersonalAccountButton();
@@ -64,13 +63,12 @@ public class EntranceTest {
         PersonalAccountPage personalAccountPage = page(PersonalAccountPage.class);
         personalAccountPage.clickExitButton();
         authorizationPage.assertInscriptionEntranceVisible();
-        Thread.sleep(1000);
     }
 
     @Test
     @DisplayName("Вход через кнопку в форме регистрации")
     @Description("Пользователь может войти в аккаунт на форме регистрации")
-    public void userAuthorizationOnTheRegistrationForm() throws InterruptedException {
+    public void userAuthorizationOnTheRegistrationForm() {
 
         HomePage homePage = open(HomePage.URL, HomePage.class);
         homePage.clickSignInButton();
@@ -86,13 +84,12 @@ public class EntranceTest {
         PersonalAccountPage personalAccountPage = page(PersonalAccountPage.class);
         personalAccountPage.clickExitButton();
         authorizationPage.assertInscriptionEntranceVisible();
-        Thread.sleep(1000);
     }
 
     @Test
     @DisplayName("Вход через кнопку в форме восстановления пароля")
     @Description("Пользователь может войти в аккаунт на форме восстановления пароля")
-    public void userAuthorizationOnThePasswordRecoveryForm() throws InterruptedException {
+    public void userAuthorizationOnThePasswordRecoveryForm() {
 
         HomePage homePage = open(HomePage.URL, HomePage.class);
         homePage.clickSignInButton();
@@ -108,7 +105,6 @@ public class EntranceTest {
         PersonalAccountPage personalAccountPage = page(PersonalAccountPage.class);
         personalAccountPage.clickExitButton();
         authorizationPage.assertInscriptionEntranceVisible();
-        Thread.sleep(1000);
     }
 
     @After

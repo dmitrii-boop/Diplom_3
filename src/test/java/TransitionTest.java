@@ -34,7 +34,7 @@ public class TransitionTest {
     @Test
     @DisplayName("Переход в личный кабинет по клику на «Личный кабинет»")
     @Description("Пользователь может войти в личный кабинет по клику кнопки «Личный кабинет»")
-    public void clickOnThePersonalAccountButton() throws InterruptedException {
+    public void clickOnThePersonalAccountButton() {
 
         HomePage homePage = open(HomePage.URL, HomePage.class);
         homePage.clickPersonalAccountButton();
@@ -47,13 +47,12 @@ public class TransitionTest {
         personalAccountPage.assertInscriptionPersonalDataVisible();
         personalAccountPage.clickExitButton();
         authorizationPage.assertInscriptionEntranceVisible();
-        Thread.sleep(1000);
     }
 
     @Test
     @DisplayName("Переход по клику на «Конструктор» из личного кабинета")
     @Description("Пользователь может войти в конструктор по клику из личного кабинета")
-    public void clickOnTheConstructorButton() throws InterruptedException {
+    public void clickOnTheConstructorButton() {
 
         HomePage homePage = open(HomePage.URL, HomePage.class);
         homePage.clickPersonalAccountButton();
@@ -68,13 +67,12 @@ public class TransitionTest {
         homePage.clickPersonalAccountButton();
         personalAccountPage.clickExitButton();
         authorizationPage.assertInscriptionEntranceVisible();
-        Thread.sleep(1000);
     }
 
     @Test
     @DisplayName("Переход по клику на логотип «Stellar Burgers» из личного кабинета")
     @Description("Пользователь может перейти по клику «Stellar Burgers» из личного кабинета")
-    public void clickOnTheStellarBurgersButton() throws InterruptedException {
+    public void clickOnTheStellarBurgersButton() {
 
         HomePage homePage = open(HomePage.URL, HomePage.class);
         homePage.clickPersonalAccountButton();
@@ -89,13 +87,12 @@ public class TransitionTest {
         homePage.clickPersonalAccountButton();
         personalAccountPage.clickExitButton();
         authorizationPage.assertInscriptionEntranceVisible();
-        Thread.sleep(1000);
     }
 
     @Test
     @DisplayName("Выход по кнопке «Выход» в личном кабинете")
     @Description("Пользователь может выйти из личного кабинета по клику кнопки «Выход»")
-    public void clickOnTheExitButton() throws InterruptedException {
+    public void clickOnTheExitButton() {
 
         HomePage homePage = open(HomePage.URL, HomePage.class);
         homePage.clickPersonalAccountButton();
@@ -107,7 +104,6 @@ public class TransitionTest {
         PersonalAccountPage personalAccountPage = page(PersonalAccountPage.class);
         personalAccountPage.clickExitButton();
         authorizationPage.assertInscriptionEntranceVisible();
-        Thread.sleep(1000);
     }
 
     @After

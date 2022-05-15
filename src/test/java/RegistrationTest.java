@@ -30,7 +30,7 @@ public class RegistrationTest {
     @Test
     @DisplayName("Успешная регистрация")
     @Description("Пользователя можно зарегистрировать")
-    public void userRegistration() throws InterruptedException {
+    public void userRegistration() {
 
         HomePage homePage = open(HomePage.URL, HomePage.class);
         homePage.clickSignInButton();
@@ -42,7 +42,6 @@ public class RegistrationTest {
         registrationPage.setValueInputPassword(password);
         registrationPage.clickRegisterButton();
         authorizationPage.assertInscriptionEntranceVisible();
-        Thread.sleep(1000);
         ValidatableResponse response = detailsUser.login(userAuthorization);
         accessToken = response.extract().path("accessToken");
         detailsUser.removal(accessToken);

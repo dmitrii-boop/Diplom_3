@@ -6,6 +6,8 @@ import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import java.time.Duration;
+
 import static com.codeborne.selenide.Condition.visible;
 
 public class AuthorizationPage {
@@ -34,7 +36,7 @@ public class AuthorizationPage {
 
     //метод получения локатора надписи "Вход"
     public void assertInscriptionEntranceVisible() {
-        inscriptionEntrance.shouldBe(visible);
+        inscriptionEntrance.shouldBe(visible, Duration.ofSeconds(10));
     }
 
     //метод заполнения поля "Email"
