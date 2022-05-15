@@ -4,6 +4,8 @@ import io.restassured.response.ValidatableResponse;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Before;
 import org.junit.Test;
+//Для тестов в Яндекс Браузере
+//import org.openqa.selenium.chrome.ChromeDriver;
 import pageobject.HomePage;
 import pageobject.AuthorizationPage;
 import pageobject.RegistrationPage;
@@ -11,6 +13,8 @@ import pogo.UserData;
 import utils.DetailsUser;
 
 import static com.codeborne.selenide.Selenide.*;
+//Для тестов в Яндекс Браузере
+import static com.codeborne.selenide.WebDriverRunner.setWebDriver;
 
 public class RegistrationTest {
 
@@ -25,6 +29,10 @@ public class RegistrationTest {
     @Before
     public void setUp() {
         detailsUser = new DetailsUser();
+//         Для тестов в Яндекс Браузере
+//         System.setProperty("webdriver.chrome.driver", "src/main/resources/yandexdriver.exe");
+//         ChromeDriver driver = new ChromeDriver();
+//         setWebDriver(driver);
     }
 
     @Test
