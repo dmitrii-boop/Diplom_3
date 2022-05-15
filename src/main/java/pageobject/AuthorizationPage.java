@@ -12,15 +12,15 @@ public class AuthorizationPage {
 
     //локатор кнопок "Зарегистрироваться", "Восстановить пароль"
     @FindBy(how = How.CLASS_NAME,using = "Auth_link__1fOlj")
-    public ElementsCollection registerRestorePasswordButton;
+    public ElementsCollection registerRestorePasswordButtons;
 
-    //локатор элемента "Вход"
+    //локатор надписи "Вход"
     @FindBy(how = How.CLASS_NAME,using = "Auth_login__3hAey")
-    public SelenideElement inputElement;
+    public SelenideElement inscriptionEntrance;
 
     //локатор полей "Email", "Пароль"
     @FindBy(how = How.XPATH,using = ".//input[@class='text input__textfield text_type_main-default']")
-    public ElementsCollection inputEmailPassword;
+    public ElementsCollection fieldsEmailPassword;
 
     //локатор кнопки "Войти"
     @FindBy(how = How.XPATH,using = ".//button[@class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_medium__3zxIa']")
@@ -29,22 +29,22 @@ public class AuthorizationPage {
 
     //метод клика по кнопке "Зарегистрироваться"
     public void clickRegisterButton() {
-        registerRestorePasswordButton.get(0).click();
+        registerRestorePasswordButtons.get(0).click();
     }
 
-    //метод получения локатора элемента "Вход"
-    public void getInputElement() {
-        inputElement.shouldBe(visible);
+    //метод получения локатора надписи "Вход"
+    public void assertInscriptionEntranceVisible() {
+        inscriptionEntrance.shouldBe(visible);
     }
 
     //метод заполнения поля "Email"
     public void setValueInputEmail(String email) {
-        inputEmailPassword.get(0).setValue(email);
+        fieldsEmailPassword.get(0).setValue(email);
     }
 
     //метод заполнения поля "Пароль"
     public void setValueInputPassword(String password) {
-        inputEmailPassword.get(1).setValue(password);
+        fieldsEmailPassword.get(1).setValue(password);
     }
 
     //метод клика по кнопке "Войти"
@@ -54,7 +54,7 @@ public class AuthorizationPage {
 
     //метод клика по кнопке "Восстановить пароль"
     public void clickRestorePasswordButton() {
-        registerRestorePasswordButton.get(1).click();
+        registerRestorePasswordButtons.get(1).click();
     }
 
 }

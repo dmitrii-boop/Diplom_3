@@ -12,7 +12,7 @@ public class RegistrationPage {
 
     //локатор полей "Имя", "Email", "Пароль"
     @FindBy(how = How.XPATH,using = ".//input[@class='text input__textfield text_type_main-default']")
-    public ElementsCollection inputNameEmailPassword;
+    public ElementsCollection nameEmailPasswordInputFields;
 
     //локатор кнопки "Зарегистрироваться"
     @FindBy(how = How.XPATH,using = ".//button[@class='button_button__33qZ0 button_button_type_primary__1O7Bx button_button_size_medium__3zxIa']")
@@ -24,22 +24,22 @@ public class RegistrationPage {
 
     //локатор надписи "Некорректный пароль"
     @FindBy(how = How.XPATH,using = ".//p[@class='input__error text_type_main-default']")
-    private SelenideElement incorrectPassword;
+    private SelenideElement messageWrongPassword;
 
 
     //метод заполнения поля "Имя"
     public void setValueInputName(String name) {
-        inputNameEmailPassword.get(0).setValue(name);
+        nameEmailPasswordInputFields.get(0).setValue(name);
     }
 
     //метод заполнения поля "Email"
     public void setValueInputEmail(String email) {
-        inputNameEmailPassword.get(1).setValue(email);
+        nameEmailPasswordInputFields.get(1).setValue(email);
     }
 
     //метод заполнения поля "Пароль"
     public void setValueInputPassword(String password) {
-        inputNameEmailPassword.get(2).setValue(password);
+        nameEmailPasswordInputFields.get(2).setValue(password);
     }
 
     //метод клика по кнопке "Зарегистрироваться"
@@ -48,8 +48,8 @@ public class RegistrationPage {
     }
 
     //метод получения локатора надписи "Некорректный пароль"
-    public void getIncorrectPassword() {
-        incorrectPassword.shouldBe(visible);
+    public void assertMessageWrongPassword() {
+        messageWrongPassword.shouldBe(visible);
     }
 
     //метод клика по кнопке "Войти"

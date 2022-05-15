@@ -23,12 +23,12 @@ public class PersonalAccountPage {
 
     //локатор текста "В этом разделе вы можете изменить свои персональные данные"
     @FindBy(how = How.XPATH,using = ".//p[@class='Account_text__fZAIn text text_type_main-default']")
-    private SelenideElement elementText;
+    private SelenideElement inscriptionPersonalData;
 
 
     //метод получения локатора текста "В этом разделе вы можете изменить свои персональные данные"
-    public void getElementText() {
-        elementText.shouldBe(visible);
+    public void assertInscriptionPersonalDataVisible() {
+        inscriptionPersonalData.shouldBe(visible);
     }
 
     //метод клика по кнопке "Конструктор"

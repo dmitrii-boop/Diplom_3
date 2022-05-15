@@ -44,9 +44,9 @@ public class TransitionTest {
         authorizationPage.clickEntranceButton();
         homePage.clickPersonalAccountButton();
         PersonalAccountPage personalAccountPage = page(PersonalAccountPage.class);
-        personalAccountPage.getElementText();
+        personalAccountPage.assertInscriptionPersonalDataVisible();
         personalAccountPage.clickExitButton();
-        authorizationPage.getInputElement();
+        authorizationPage.assertInscriptionEntranceVisible();
         Thread.sleep(1000);
     }
 
@@ -64,10 +64,10 @@ public class TransitionTest {
         homePage.clickPersonalAccountButton();
         PersonalAccountPage personalAccountPage = page(PersonalAccountPage.class);
         personalAccountPage.clickConstructButton();
-        homePage.getCheckoutButton();
+        homePage.assertCheckoutButtonVisible();
         homePage.clickPersonalAccountButton();
         personalAccountPage.clickExitButton();
-        authorizationPage.getInputElement();
+        authorizationPage.assertInscriptionEntranceVisible();
         Thread.sleep(1000);
     }
 
@@ -85,10 +85,10 @@ public class TransitionTest {
         homePage.clickPersonalAccountButton();
         PersonalAccountPage personalAccountPage = page(PersonalAccountPage.class);
         personalAccountPage.clickStellarBurgersButton();
-        homePage.getCheckoutButton();
+        homePage.assertCheckoutButtonVisible();
         homePage.clickPersonalAccountButton();
         personalAccountPage.clickExitButton();
-        authorizationPage.getInputElement();
+        authorizationPage.assertInscriptionEntranceVisible();
         Thread.sleep(1000);
     }
 
@@ -106,7 +106,7 @@ public class TransitionTest {
         homePage.clickPersonalAccountButton();
         PersonalAccountPage personalAccountPage = page(PersonalAccountPage.class);
         personalAccountPage.clickExitButton();
-        authorizationPage.getInputElement();
+        authorizationPage.assertInscriptionEntranceVisible();
         Thread.sleep(1000);
     }
 

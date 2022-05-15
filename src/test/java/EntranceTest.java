@@ -40,11 +40,11 @@ public class EntranceTest {
         authorizationPage.setValueInputEmail(email);
         authorizationPage.setValueInputPassword(password);
         authorizationPage.clickEntranceButton();
-        homePage.getCheckoutButton();
+        homePage.assertCheckoutButtonVisible();
         homePage.clickPersonalAccountButton();
         PersonalAccountPage personalAccountPage = page(PersonalAccountPage.class);
         personalAccountPage.clickExitButton();
-        authorizationPage.getInputElement();
+        authorizationPage.assertInscriptionEntranceVisible();
         Thread.sleep(1000);
     }
 
@@ -59,11 +59,11 @@ public class EntranceTest {
         authorizationPage.setValueInputEmail(email);
         authorizationPage.setValueInputPassword(password);
         authorizationPage.clickEntranceButton();
-        homePage.getCheckoutButton();
+        homePage.assertCheckoutButtonVisible();
         homePage.clickPersonalAccountButton();
         PersonalAccountPage personalAccountPage = page(PersonalAccountPage.class);
         personalAccountPage.clickExitButton();
-        authorizationPage.getInputElement();
+        authorizationPage.assertInscriptionEntranceVisible();
         Thread.sleep(1000);
     }
 
@@ -81,11 +81,11 @@ public class EntranceTest {
         authorizationPage.setValueInputEmail(email);
         authorizationPage.setValueInputPassword(password);
         authorizationPage.clickEntranceButton();
-        homePage.getCheckoutButton();
+        homePage.assertCheckoutButtonVisible();
         homePage.clickPersonalAccountButton();
         PersonalAccountPage personalAccountPage = page(PersonalAccountPage.class);
         personalAccountPage.clickExitButton();
-        authorizationPage.getInputElement();
+        authorizationPage.assertInscriptionEntranceVisible();
         Thread.sleep(1000);
     }
 
@@ -103,11 +103,11 @@ public class EntranceTest {
         authorizationPage.setValueInputEmail(email);
         authorizationPage.setValueInputPassword(password);
         authorizationPage.clickEntranceButton();
-        homePage.getCheckoutButton();
+        homePage.assertCheckoutButtonVisible();
         homePage.clickPersonalAccountButton();
         PersonalAccountPage personalAccountPage = page(PersonalAccountPage.class);
         personalAccountPage.clickExitButton();
-        authorizationPage.getInputElement();
+        authorizationPage.assertInscriptionEntranceVisible();
         Thread.sleep(1000);
     }
 

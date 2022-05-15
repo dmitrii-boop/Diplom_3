@@ -15,7 +15,7 @@ public class GoToSectionTest {
 
         HomePage homePage = open(HomePage.URL, HomePage.class);
         homePage.clickSaucesButton();
-        homePage.getSaucesChapters();
+        homePage.assertSaucesChaptersVisible();
     }
 
     @Test
@@ -26,7 +26,7 @@ public class GoToSectionTest {
         HomePage homePage = open(HomePage.URL, HomePage.class);
         homePage.clickSaucesButton();
         homePage.clickBunsButton();
-        homePage.getBunsChapters();
+        homePage.assertBunsChaptersVisible();
     }
 
 
@@ -37,6 +37,6 @@ public class GoToSectionTest {
 
         HomePage homePage = open(HomePage.URL, HomePage.class);
         homePage.clickToppingsButton();
-        homePage.getToppingsChapters();
+        homePage.assertToppingsChaptersVisible();
     }
 }

@@ -44,7 +44,7 @@ public class HomePage {
     }
 
     //метод получения локатора кнопки "Оформить заказ"
-    public void getCheckoutButton() {
+    public void assertCheckoutButtonVisible() {
         checkoutButton.shouldBe(visible);
     }
 
@@ -64,17 +64,17 @@ public class HomePage {
     }
 
     //метод получения локатора раздела "Соусы"
-    public void getSaucesChapters() {
+    public void assertSaucesChaptersVisible() {
         bunsSaucesToppingsChapters.get(1).shouldBe(visible);
     }
 
     //метод получения локатора раздела "Начинки"
-    public void getToppingsChapters() {
+    public void assertToppingsChaptersVisible() {
         bunsSaucesToppingsChapters.get(2).shouldBe(visible);
     }
 
     //метод получения локатора раздела "Булки"
-    public void getBunsChapters() {
+    public void assertBunsChaptersVisible() {
         bunsSaucesToppingsChapters.get(0).shouldBe(visible);
     }
 }

@@ -41,7 +41,7 @@ public class RegistrationTest {
         registrationPage.setValueInputEmail(email);
         registrationPage.setValueInputPassword(password);
         registrationPage.clickRegisterButton();
-        authorizationPage.getInputElement();
+        authorizationPage.assertInscriptionEntranceVisible();
         Thread.sleep(1000);
         ValidatableResponse response = detailsUser.login(userAuthorization);
         accessToken = response.extract().path("accessToken");
@@ -62,6 +62,6 @@ public class RegistrationTest {
         registrationPage.setValueInputEmail(email);
         registrationPage.setValueInputPassword("lol17");
         registrationPage.clickRegisterButton();
-        registrationPage.getIncorrectPassword();
+        registrationPage.assertMessageWrongPassword();
     }
 }
